@@ -177,7 +177,7 @@ class Shop:
             add_length = user_data['length']
             true_add = self.data_manager.add_length(group_id, user_id, add_length)
             text += f"🏥 手术成功\n"
-            text += get_add_text(true_add, add_length, user_data)
+            text += get_add_text(true_add, add_length * 2, user_data)
         else:
             del_length = int(user_data['length'] / 2)
             self.data_manager.del_length(user_id, del_length)
